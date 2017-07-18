@@ -213,10 +213,10 @@ function raytrace(nx, ny, nz, mx, my, mz)
           ///////////////////////////////////////////////////////////
           //If volume size 32 then it would be -16, 16
 
-          var c1 = Math.cos(rotx * 0.0001105329251994);
-          var c2 = Math.cos((-rotx) * 0.0001105329251994);
-          var s1 = Math.sin(rotx * 0.0001105329251994);
-          var s2 = Math.sin((-rotx) * 0.0001105329251994);
+          var c1 = Math.cos(rotx * 0.01105329251994);
+          var c2 = Math.cos((-rotx) * 0.01105329251994);
+          var s1 = Math.sin(rotx * 0.01105329251994);
+          var s2 = Math.sin((-rotx) * 0.01105329251994);
           var tempx = (pitchx * s1) + (yawx * c1);
           var tempy = (pitchy * s1) + (yawy * c1);
           var tempz = (pitchz * s1) + (yawz * c1);
@@ -227,10 +227,10 @@ function raytrace(nx, ny, nz, mx, my, mz)
           yawy = tempy;
           yawz = tempz;      
 
-          c1 = Math.cos(-roty * 0.0001105329251994);
-          c2 = Math.cos(roty* 0.0001105329251994);
-          s1 = Math.sin(-roty * 0.0001105329251994);
-          s2 = Math.sin(roty * 0.0001105329251994);
+          c1 = Math.cos(-roty * 0.01105329251994);
+          c2 = Math.cos(roty* 0.01105329251994);
+          s1 = Math.sin(-roty * 0.01105329251994);
+          s2 = Math.sin(roty * 0.01105329251994);
           tempx = (rollx * s1) + (yawx * c1);
           tempy = (rolly * s1) + (yawy * c1);
           tempz = (rollz * s1) + (yawz * c1);
@@ -241,10 +241,10 @@ function raytrace(nx, ny, nz, mx, my, mz)
           yawy = tempy;
           yawz = tempz;      
 
-          c1 = Math.cos(rotz * 0.0001105329251994);
-          c2 = Math.cos((-rotz) * 0.0001105329251994);
-          s1 = Math.sin(rotz * 0.0001105329251994);
-          s2 = Math.sin((-rotz) * 0.000105329251994);
+          c1 = Math.cos(rotz * 0.01105329251994);
+          c2 = Math.cos((-rotz) * 0.01105329251994);
+          s1 = Math.sin(rotz * 0.01105329251994);
+          s2 = Math.sin((-rotz) * 0.0105329251994);
           tempx = (pitchx * s1) + (rollx * c1);
           tempy = (pitchy * s1) + (rolly * c1);
           tempz = (pitchz * s1) + (rollz * c1);
