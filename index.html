@@ -118,7 +118,7 @@ function raytrace(nx, ny, nz, mx, my, mz)
 
     var loc = sx + (sy << 12);
     var ht = vol[loc]&255;
-    if(sz > 400) return 0xFFB96546;
+    if(sz > 280) return 0xFFB96546;
     if(sz > ht + 48)
     {
       if(slice > 92)
@@ -151,7 +151,7 @@ function raytrace(nx, ny, nz, mx, my, mz)
 
     var loc = sx + (sy << 12);
     var ht = vol[loc]&255;
-    if(sz > 300) return ((383 - slice)<<24) | 0xB96546;
+    if(sz > 270) return ((383 - slice)<<24) | 0xB96546;
     if(sz > ht + 63)
     {
       if(slice > 239)
