@@ -151,7 +151,7 @@ function raytrace(nx, ny, nz, mx, my, mz)
 
     var loc = sx + (sy << 12);
     var ht = vol[loc]&255;
-    if(sz > 270) return ((383 - slice)<<24) | 0xB96546;
+    if(sz > 270) return 0xFFB96546;
     if(sz > ht + 63)
     {
       if(slice > 239)
@@ -184,7 +184,7 @@ function raytrace(nx, ny, nz, mx, my, mz)
 
     var loc = sx + (sy << 12);
     var ht = vol[loc]&255;
-    if(sz > 250) return ((383 - slice)<<24) | 0xB96546;
+    if(sz > 250)  return 0xFFB96546;
     if(sz > ht + 63)
     {
       if(slice > 373)
@@ -199,11 +199,11 @@ function raytrace(nx, ny, nz, mx, my, mz)
     } 
     else
     {
-      if(sz < ht)  return ((511 - slice)<<24) | (rom[loc] & 0xFFFFFF);
+      if(sz < ht)  return rom[loc];
       slice++;
     }
   }
-  return 0xFFECAD76;
+   return 0xFFB96546;
 }
     function accelerometerUpdate(e)
     {
